@@ -3,6 +3,15 @@ ActiveRecord::Base.establish_connection(
 :database => "db/artists.sqlite"
 )
 
+sql = <<-SQL
+  CREATE TABLE IF NOT EXISTS artists (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    genre TEXT,
+    age INTEGER,
+    hometown TEXT
+  )
+
 class CreateArtists < ActiveRecord::Migration[5.2]
 
   def up
