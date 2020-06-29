@@ -11,6 +11,9 @@ sql = <<-SQL
     age INTEGER,
     hometown TEXT
   )
+  SQL
+
+ActiveRecord::Base.connection.execute(SQL)
 
 class CreateArtists < ActiveRecord::Migration[5.2]
 
