@@ -13,7 +13,7 @@ sql = <<-SQL
   )
   SQL
 
-ActiveRecord::Base.connection.execute(SQL)
+ActiveRecord::Base.connection.execute(sql)
 
 class CreateArtists < ActiveRecord::Migration[5.2]
 
